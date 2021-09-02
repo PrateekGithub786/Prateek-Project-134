@@ -1,5 +1,6 @@
 object = [];
 status = "";
+sound = "";
 
 function preload(){
     sound = loadSound("astronaut.mp3");
