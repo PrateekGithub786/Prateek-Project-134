@@ -18,7 +18,6 @@ function setup(){
 function modelLoaded(){
     console.log("Model Loaded");
     status = true;
-    objectDetect.detect(video, gotResults);
 }
 
 function gotResults(error, results){
@@ -35,6 +34,8 @@ function draw(){
     if(status != ""){
         for(i = 0; i < object.length; i++){
             document.getElementById("status").innerHTML = "Status : Object Detected";
+
+            objectDetect.detect(video, gotResults);
 
             fill(255, 0, 0);
             percent = floor(object[i].confidence * 100);
